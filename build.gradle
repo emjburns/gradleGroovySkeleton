@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'groovyhello.Hello'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'hw'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+run{
+    standardInput = System.in
+}
